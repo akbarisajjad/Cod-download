@@ -1,11 +1,11 @@
 <?php
 /*
-Plugin Name: دانلود با کد تأیید (پیشرفته)
-Plugin URI: https://example.com/plugin
+Plugin Name: Download with verification code
+Plugin URI: https://seokar.click/
 Description: ایجاد سیستم دانلود با کد تأیید، مدیریت چند لینک، طراحی زیبا و امکانات پیشرفته
-Version: 1.0
-Author: Your Name
-Author URI: https://example.com
+Version: 1.0.2
+Author: sajjadakbari
+Author URI: https://sajjadakbari.ir
 */
 
 // ثبت منو در پیشخوان وردپرس
