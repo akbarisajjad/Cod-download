@@ -1,11 +1,11 @@
 <?php
 /*
-Plugin Name: Download with verification code
-Plugin URI: 
+Plugin Name: دانلود با کد تأیید (پیشرفته)
+Plugin URI: https://example.com/plugin
 Description: ایجاد سیستم دانلود با کد تأیید، مدیریت چند لینک، طراحی زیبا و امکانات پیشرفته
-Version: 1.0.2
-Author: sajjadakbari
-Author URI: sajjadakbari.ir
+Version: 1.0
+Author: Your Name
+Author URI: https://example.com
 */
 
 // ثبت منو در پیشخوان وردپرس
@@ -30,7 +30,8 @@ function download_code_manager_page() {
     if (isset($_POST['submit_new_link'])) {
         check_admin_referer('save_new_download_link');
 
-        $download_links = array_map('esc_url_raw', $_POST['download_links']);
+        $download_links = explode("\n", $_POST['download_links']);
+        $download_links = array_map('esc_url_raw', $download_links);
         $require_login = isset($_POST['require_login']) ? 1 : 0;
         $generated_code = str_pad(rand(0, 9999), 4, '0', STR_PAD_LEFT);
 
